@@ -13,8 +13,8 @@ const lookup = {
 function rot13(encodedStr){
    let decodedArr = []; // Your Result goes here
   // Only change code below this line
-	for(let element of lookup){
-		if(element>="A" && element<="Z"){
+	for(let element in lookup){
+		if(lookup[element]>="A" && lookup[element]<="Z"){
 			element+=fromCharCode(element+"13");
 			decodedArr.push(element);
 		}else{
