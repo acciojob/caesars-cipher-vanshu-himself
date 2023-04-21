@@ -11,19 +11,20 @@ const lookup = {
 };
 
 function rot13(encodedStr){
-   let decodedArr = []; // Your Result goes here
-  // Only change code below this line
-	for(let element in lookup){
-		if(lookup[element]>="A" && lookup[element]<="Z"){
-			element+=fromCharCode(element+"13");
-			decodedArr.push(element);
-		}else{
-			ecodedArr.push(element);
+   var words= encoded.split(" ");
+	let decodedarr=[];
+	for(let i=0;i< words.length;i++){
+		const word=words[i];
+		let decoded_word="";
+		for(let j=0;j<words.length;j++){
+			var char = words.charAt(j);
+			var decoded_char=lookup[char];
+			decoded_word+=decoded_char;
+			
 		}
-	}
-
-  return ;//return decodedArr
-}
+		decodedArr.push(decoded_word);
+	}return decodedArr.join(" ");
+  
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
